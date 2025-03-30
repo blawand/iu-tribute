@@ -1,0 +1,98 @@
+/* --- css/filmography.css --- */
+
+/* Filmography Overview Grid */
+.filmography-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: var(--padding-large);
+}
+.film-item {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.film-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.film-item img {
+    width: 100%;
+    aspect-ratio: 2 / 3; /* Portrait ratio for posters */
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 0.8em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+.film-item:hover {
+    transform: scale(1.03);
+}
+.film-item:hover img {
+     box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+.film-item h3 {
+    font-size: 1.1rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    margin-bottom: 0.2em;
+}
+.film-item p {
+    font-size: 0.9em;
+    color: var(--color-text-muted);
+    margin-bottom: 0;
+}
+
+
+/* Movie/Drama Detail Page Specific Styles */
+.movie-detail-header { padding: 2rem 0; } /* Less padding if content starts below */
+.movie-detail-main-content {
+    display: flex;
+    gap: var(--padding-large);
+    align-items: flex-start;
+}
+.movie-detail-poster {
+    max-width: 250px;
+    flex-shrink: 0;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+.movie-detail-info h1 { margin-top: 0; font-size: 2.5rem;}
+.movie-detail-info .movie-meta { color: var(--color-text-muted); margin-bottom: 1em; }
+.movie-detail-info .scene-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--padding-base);
+    margin: 1.5em 0;
+}
+.movie-detail-info .scene-gallery figure { margin: 0; }
+.movie-detail-info .scene-gallery img {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+     width: 100%; /* Ensure images fill grid cell */
+     height: auto;
+     aspect-ratio: 16/9; /* Adjust aspect ratio as needed for scenes */
+     object-fit: cover;
+}
+.movie-detail-info .scene-gallery figcaption {
+    font-size: 0.85em;
+    text-align: center;
+    color: var(--color-text-muted);
+    margin-top: 0.5em;
+}
+
+/* Responsive adjustments specific to filmography if needed */
+@media (max-width: 992px) {
+    .filmography-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: var(--padding-base);
+    }
+     .movie-detail-main-content { flex-direction: column; align-items: center; text-align: center; }
+     .movie-detail-poster { margin-bottom: var(--padding-base); }
+}
+
+@media (max-width: 768px) {
+     .filmography-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: var(--padding-base);
+    }
+}

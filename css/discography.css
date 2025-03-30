@@ -1,0 +1,134 @@
+/* --- css/discography.css --- */
+
+/* Discography Overview Grid */
+.discography-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: var(--padding-large);
+}
+.album-item {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.album-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.album-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Make covers square */
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 0.8em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+.album-item:hover {
+    transform: scale(1.03);
+}
+.album-item:hover img {
+     box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+.album-item h3 {
+    font-size: 1.1rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    margin-bottom: 0.2em;
+}
+.album-item p {
+    font-size: 0.9em;
+    color: var(--color-text-muted);
+    margin-bottom: 0;
+}
+
+
+/* Album Detail Page Specific Styles */
+.album-detail-page .album-hero-section { /* Scope to detail page */
+    background-color: #f0e9e0; /* Slightly different bg */
+    padding: var(--section-padding);
+}
+.album-detail-page .album-hero-content {
+    display: flex;
+    align-items: center;
+    gap: var(--padding-large);
+}
+.album-detail-page .album-detail-cover {
+    max-width: 300px;
+    flex-shrink: 0;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+.album-detail-page .album-detail-info h1 { margin-top: 0; font-size: 2.5rem; }
+.album-detail-page .album-meta { color: var(--color-text-muted); margin-bottom: 1em; }
+.album-detail-page .album-concept { margin-bottom: 1.5em; }
+.album-detail-page .stream-links a { margin-right: 0.5em; margin-bottom: 0.5em; }
+
+.album-detail-page .album-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Adjust ratio as needed */
+    gap: var(--padding-large);
+}
+.album-detail-page .tracklist-container h2 { margin-top: 0; }
+.album-detail-page .tracklist { list-style-type: decimal; padding-left: 1.2em; }
+.album-detail-page .tracklist li {
+    padding: 0.6em 0;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+}
+.album-detail-page .tracklist li span { flex-grow: 1; margin-right: 1em; }
+.album-detail-page .tracklist li:last-child { border-bottom: none; }
+.album-detail-page .action-note { font-size: 0.8em; color: #aaa; margin-top: 1em; }
+
+.album-detail-page .album-detail-content h2 { margin-top: 0; }
+.album-detail-page .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin-bottom: 1.5em;
+}
+.album-detail-page .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.album-detail-page .lyrics-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--padding-large);
+    background-color: var(--color-highlight-bg);
+    padding: var(--padding-base);
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5em;
+    font-size: 0.95em;
+}
+.album-detail-page .lyrics-display p { margin-bottom: 0.5em; }
+.album-detail-page .lyrics-display strong { display: block; margin-bottom: 0.5em; font-weight: 600; color: var(--color-primary-accent); }
+
+/* Responsive adjustments specific to discography if needed */
+@media (max-width: 992px) {
+    .discography-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: var(--padding-base);
+    }
+     .album-detail-page .album-hero-content { flex-direction: column; text-align: center; }
+     .album-detail-page .album-detail-cover { max-width: 250px; margin-bottom: var(--padding-base); }
+     .album-detail-page .album-detail-grid { grid-template-columns: 1fr; } /* Stack on tablets */
+}
+
+@media (max-width: 768px) {
+     .discography-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: var(--padding-base);
+    }
+     .album-detail-page .lyrics-display { grid-template-columns: 1fr; } /* Stack lyrics */
+}
