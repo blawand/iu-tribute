@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real (Album) - IU - dlwlrma's Constellation</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/discography.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body class="album-detail-page">
+    <header class="main-header">
+        <div class="container">
+             <a href="../index.html" class="logo">dlwlrma's Constellation</a>
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+                 <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About IU</a></li>
+                    <li><a href="index.html" class="active">Music</a></li>
+                    <li><a href="../filmography/index.html">Acting</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../awards.html">Awards</a></li>
+                    <li><a href="../news.html">News</a></li>
+                    <li><a href="../why-we-love-iu.html">Why We Love IU</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="album-hero-section">
+            <div class="container album-hero-content">
+                <img src="../images/album-real-placeholder-large.jpg" alt="Real Album Cover" class="album-detail-cover">
+                <div class="album-detail-info">
+                    <h1>Real</h1>
+                    <p class="album-meta">3rd Mini Album | Released: December 9, 2010</p>
+                    <p class="album-concept">[Placeholder: Concept description for Real. Breakthrough album featuring 'Good Day'. Showcased IU's incredible vocal talent and established her 'Nation's Little Sister' image. Bright, youthful, pop sound with growing maturity.]</p>
+                    <div class="stream-links">
+                        <a href="#" target="_blank" class="btn-stream">Spotify</a>
+                        <a href="#" target="_blank" class="btn-stream">Apple Music</a>
+                        <a href="#" target="_blank" class="btn-stream">YouTube Music</a>
+                    </div>
+                </div>
+            </section>
+
+        <section class="container section-padding">
+            <div class="album-detail-grid">
+                <div class="tracklist-container">
+                    <h2>Tracklist</h2>
+                    <ol class="tracklist">
+                         <li><span>이게 아닌데 (This is not what I thought)</span><button class="btn-action btn-lyrics" disabled>Lyrics</button></li>
+                         <li><span>느리게 하는 일 (The Thing I Do Slowly)</span><button class="btn-action btn-lyrics" disabled>Lyrics</button></li>
+                         <li class="has-mv"><span>좋은 날 (Good Day)</span><button class="btn-action btn-lyrics">Lyrics/Analysis</button><button class="btn-action btn-mv">MV Concept</button><button class="btn-action btn-live">Live Highlights</button></li>
+                         <li><span>첫 이별 그날 밤 (The First Breakup, That Night)</span><button class="btn-action btn-lyrics" disabled>Lyrics</button></li>
+                         <li><span>혼자 있는 방 (Alone in the Room)</span><button class="btn-action btn-lyrics" disabled>Lyrics</button></li>
+                         <li><span>미리 메리 크리스마스 (Merry Christmas Ahead) (feat. Thunder)</span><button class="btn-action btn-lyrics" disabled>Lyrics</button></li>
+                         <li><span>좋은 날 (Good Day) (Inst.)</span></li>
+                    </ol>
+                     <p class="action-note">* Functionality for Lyrics/MV/Live sections is illustrative.</p>
+                </div>
+
+                <div class="album-detail-content">
+                    <!-- Placeholder sections for dynamic content -->
+                     <article id="good-day-mv" class="detail-content-section" style="display: none;">
+                        <h2>Music Video Concept: Good Day (좋은 날)</h2>
+                        <div class="video-wrapper"><p style="text-align:center; padding: 5em 0;">[Good Day MV Embed Placeholder]</p></div>
+                        <p>[Placeholder: Analysis of the Good Day MV - Bright, slightly quirky visuals, IU interacting with a parrot, themes of youthful crush and wanting to confess, iconic imagery associated with the song's breakthrough.]</p>
+                    </article>
+
+                    <article id="good-day-lyrics" class="detail-content-section"> <!-- Default shown -->
+                        <h2>Lyrics & Analysis: Good Day (좋은 날)</h2>
+                        <div class="lyrics-display">
+                             <div class="lyrics-korean"><p><strong>[Korean Lyrics Placeholder]</strong></p></div>
+                             <div class="lyrics-english"><p><strong>[English Translation Placeholder]</strong></p></div>
+                        </div>
+                        <p><strong>Analysis:</strong> [Placeholder: Analysis of Good Day lyrics - Expressing the shy but bold feelings of a girl confessing to an older 'oppa', the hopefulness and uncertainty of a crush, leading up to the iconic high notes.]</p>
+                    </article>
+
+                    <article id="good-day-live" class="detail-content-section" style="display: none;">
+                         <h2>Live Performance Highlights: Good Day (좋은 날)</h2>
+                         <p>[Placeholder: Description of notable 'Good Day' live performances - focus on the legendary 3-octave high note, the energy, choreography, and how it cemented her status.]</p>
+                     </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2024 dlwlrma's Constellation. A fan tribute site created with love for IU.</p>
+             <p>This is a non-profit fan project. All rights belong to IU, EDAM Entertainment, and respective copyright holders.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Generic Toggle Script (Copy from palette.html or lilac.html and adapt mappings)
+         document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.album-detail-page .btn-action');
+            const contentSections = document.querySelectorAll('.album-detail-page .detail-content-section');
+            const defaultSection = document.querySelector('.album-detail-page #good-day-lyrics'); // Default view
+
+             function getTargetId(button) { /* ... (copy function) ... */
+                 const li = button.closest('li'); if (!li) return null;
+                 const span = li.querySelector('span'); if (!span) return null;
+                 let baseId = span.textContent.trim().toLowerCase().split('(')[0].trim().replace(/[^a-z0-9가-힣]+/g, '-').replace(/^-+|-+$/g, '');
+                 const mappings = { '좋은-날': 'good-day', /* Add other Real tracks if needed */ };
+                 baseId = mappings[baseId] || baseId;
+                 if (button.classList.contains('btn-mv')) return baseId + '-mv';
+                 if (button.classList.contains('btn-lyrics')) return baseId + '-lyrics';
+                 if (button.classList.contains('btn-live')) return baseId + '-live';
+                 return null;
+            }
+
+             contentSections.forEach(sec => sec.style.display = 'none');
+             if (defaultSection) defaultSection.style.display = 'block';
+
+            buttons.forEach(button => { /* ... (copy event listener logic) ... */
+                 button.addEventListener('click', (e) => {
+                    if (e.target.disabled) return;
+                    const targetId = getTargetId(button); if (!targetId) return;
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        contentSections.forEach(sec => sec.style.display = 'none');
+                        targetSection.style.display = 'block';
+                    } else {
+                        console.log("Target section not found for ID:", targetId);
+                        contentSections.forEach(sec => sec.style.display = 'none');
+                        if (defaultSection) defaultSection.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
